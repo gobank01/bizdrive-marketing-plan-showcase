@@ -27,6 +27,8 @@ test('publishes the explicit canonical /toothpaste route', () => {
   const routeSource = readFileSync(canonicalRouteFile, 'utf8');
   assert.match(routeSource, /getPlanBySlug/);
   assert.match(routeSource, /ToothpastePlan/);
+  assert.match(routeSource, /alternates:\s*\{/);
+  assert.match(routeSource, /canonical:\s*['"]\/toothpaste['"]/);
   assert.doesNotMatch(routeSource, /generateStaticParams|decodeURIComponent|force-dynamic/);
 });
 

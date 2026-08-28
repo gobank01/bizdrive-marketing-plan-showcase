@@ -6,6 +6,9 @@ import { getPlanBySlug } from '@/lib/plans';
 export const metadata: Metadata = {
   title: 'แผนการตลาดยาสีฟันพรีเมียม',
   description: 'Premium daily ritual × proof transparency — แผนวิจัย 10 แบรนด์, Customer Voice 100 records และแผน 12 ขั้น',
+  alternates: {
+    canonical: '/toothpaste',
+  },
   openGraph: {
     title: 'แผนการตลาดยาสีฟันพรีเมียม',
     description: 'Premium daily ritual × proof transparency',
