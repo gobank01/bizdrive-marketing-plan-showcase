@@ -145,24 +145,49 @@ for name in ('competitor_matrix.csv', 'positioning_map.csv'):
     out_name = 'competitors.json' if name == 'competitor_matrix.csv' else 'positioning.json'
     (CONTENT / 'data' / out_name).write_text(json.dumps(rows, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
-shutil.copy2(SOURCE / 'maps' / 'positioning_maps.png', PUBLIC_IMAGES / 'positioning-maps.png')
-shutil.copy2(SOURCE / 'maps' / 'positioning_maps.svg', DOWNLOADS / 'positioning-maps.svg')
+positioning_svg = (SOURCE / 'maps' / 'positioning_maps.svg').read_text(encoding='utf-8')
+positioning_recolors = (
+    ('#fafafa', '#ffffff'), ('fill:#333', 'fill:#0b1f3a'),
+    ('fill:#166534', 'fill:#8a5a00'), ('fill:#065f46', 'fill:#064b8f'),
+    ('stroke="#ddd"', 'stroke="#c7d9ee"'), ('stroke="#555"', 'stroke="#476789"'),
+    ('fill="#bbf7d0"', 'fill="#fff1a8"'), ('stroke="#16a34a"', 'stroke="#ffc928"'),
+    ('fill="#2563eb"', 'fill="#0067c5"'), ('fill="#7c3aed"', 'fill="#0b4f9c"'),
+    ('fill="#db2777"', 'fill="#9a6500"'), ('fill="#0891b2"', 'fill="#005eb8"'),
+    ('fill="#d97706"', 'fill="#9a6500"'), ('fill="#16a34a"', 'fill="#174ea6"'),
+    ('fill="#dc2626"', 'fill="#8a5a00"'), ('fill="#4f46e5"', 'fill="#0050a4"'),
+    ('fill="#9333ea"', 'fill="#0067c5"'), ('fill="#65a30d"', 'fill="#8a5a00"'),
+    ('fill="#059669"', 'fill="#ffc928"'),
+    ('class="l" fill="white">T</text>', 'class="l" fill="#0b1f3a">T</text>'),
+    ('T / green dashed area', 'T / yellow dashed area'),
+)
+for old_color, bizdrive_color in positioning_recolors:
+    positioning_svg = positioning_svg.replace(old_color, bizdrive_color)
+(PUBLIC_IMAGES / 'positioning-maps.svg').write_text(positioning_svg, encoding='utf-8')
+(DOWNLOADS / 'positioning-maps.svg').write_text(positioning_svg, encoding='utf-8')
+old_positioning_png = PUBLIC_IMAGES / 'positioning-maps.png'
+if old_positioning_png.exists():
+    old_positioning_png.unlink()
 write_sanitized_docx(
     SOURCE / 'Premium-Toothpaste-Marketing-Plan-Thailand-Trial.docx',
     DOWNLOADS / 'full-plan.docx',
 )
 
-INK = '#25211d'
-MUTED = '#756e66'
-PAPER = '#f7f3eb'
-WHITE = '#fffdf8'
-TEAL = '#137f73'
-TEAL2 = '#9ed8cb'
-CORAL = '#df6b4f'
-YELLOW = '#efc861'
-BLUE = '#5888be'
-PURPLE = '#8f6cb6'
-GREEN = '#69a66f'
+INK = '#0b1f3a'
+MUTED = '#4b607b'
+PAPER = '#f4f8ff'
+WHITE = '#ffffff'
+TEAL = '#0067c5'
+TEAL2 = '#cfe4ff'
+CORAL = '#9a6500'
+YELLOW = '#ffc928'
+BLUE = '#005eb8'
+PURPLE = '#0b4f9c'
+GREEN = '#174ea6'
+
+
+def foreground(color: str) -> str:
+    """Return a WCAG AA text color for a solid BizDrive palette fill."""
+    return INK if color in (YELLOW, TEAL2) else WHITE
 
 
 def frame(title: str, subtitle: str, body: str, bg: str = PAPER) -> str:
@@ -190,15 +215,16 @@ save('hero-ritual.svg', 'Premium that earns the ritual', 'Daily sensorial experi
 
 # 2 Market landscape
 save('market-landscape.svg', 'Category landscape', 'Directional total toothpaste context — not audited premium TAM', f'''
-<g transform="translate(90 245)"><rect width="460" height="330" rx="28" fill="{WHITE}" stroke="#d8d1c8"/><text x="42" y="72" font-family="Arial" font-size="78" font-weight="700" fill="{INK}">10.2–12B</text><text x="44" y="112" font-family="Arial" font-size="24" fill="{MUTED}">THB total toothpaste context</text><path d="M45 245 C125 205 190 230 255 170 S380 115 420 75" fill="none" stroke="{TEAL}" stroke-width="10" stroke-linecap="round"/><circle cx="420" cy="75" r="12" fill="{CORAL}"/><text x="44" y="295" font-family="Arial" font-size="18" fill="{CORAL}">Trade-press range • methodology undisclosed</text></g>
+<g transform="translate(90 245)"><rect width="460" height="330" rx="28" fill="{WHITE}" stroke="#c7d9ee"/><text x="42" y="72" font-family="Arial" font-size="78" font-weight="700" fill="{INK}">10.2–12B</text><text x="44" y="112" font-family="Arial" font-size="24" fill="{MUTED}">THB total toothpaste context</text><path d="M45 245 C125 205 190 230 255 170 S380 115 420 75" fill="none" stroke="{TEAL}" stroke-width="10" stroke-linecap="round"/><circle cx="420" cy="75" r="12" fill="{CORAL}"/><text x="44" y="295" font-family="Arial" font-size="18" fill="{CORAL}">Trade-press range • methodology undisclosed</text></g>
 <g transform="translate(640 235)" font-family="Arial"><text x="0" y="20" font-size="20" font-weight="700" fill="{INK}">PRICE / PROPOSITION LADDER</text>{''.join(f'<rect x="0" y="{70+i*76}" width="{380-i*48}" height="48" rx="10" fill="{c}"/><text x="18" y="{101+i*76}" font-size="17" font-weight="700" fill="white">{escape(label)}</text>' for i,(label,c) in enumerate([('Mass & herbal anchors',GREEN),('Mass-premium whitening',BLUE),('Thai premium ritual',TEAL),('Imported specialty',PURPLE)]))}</g>
 <text x="70" y="700" font-family="Arial" font-size="24" font-weight="700" fill="{INK}">Opportunity ≠ empty price point</text><text x="70" y="738" font-family="Arial" font-size="20" fill="{MUTED}">Winning requires desirability, proof, economics, compliance and route-to-market.</text>''')
 
 # 3 Competitor orbit
 brands = ["DENTISTE'", 'MARVIS', 'APAGARD', 'CURAPROX', 'VUSSEN', 'SENSODYNE', 'COLGATE', 'ORAL-B', 'SPARKLE', 'TWIN LOTUS']
 coords = [(600,255),(765,305),(855,440),(820,585),(685,655),(515,655),(380,585),(345,440),(435,305),(600,335)]
-nodes = ''.join(f'<circle cx="{x}" cy="{y}" r="64" fill="{[TEAL,CORAL,YELLOW,BLUE,PURPLE,GREEN,TEAL2,CORAL,YELLOW,BLUE][i]}" opacity=".96"/><text x="{x}" y="{y+5}" text-anchor="middle" font-family="Arial" font-size="{14 if len(b)>8 else 16}" font-weight="700" fill="{INK if i in (2,6,8) else WHITE}">{b}</text>' for i,(b,(x,y)) in enumerate(zip(brands,coords)))
-save('competitor-orbit.svg', 'Ten-brand competitive orbit', 'The same fixed set is used across price, claims, Voice and maps', f'''<circle cx="600" cy="455" r="250" fill="none" stroke="#d8d1c8" stroke-width="3" stroke-dasharray="10 12"/>{nodes}<circle cx="600" cy="455" r="95" fill="{INK}"/><text x="600" y="445" text-anchor="middle" font-family="Arial" font-size="18" fill="{TEAL2}">TRIAL TARGET</text><text x="600" y="477" text-anchor="middle" font-family="Arial" font-size="25" font-weight="700" fill="white">RITUAL × PROOF</text><text x="70" y="735" font-family="Arial" font-size="18" fill="{MUTED}">Analytical set — not market-share ranking.</text>''')
+orbit_colors = [TEAL,CORAL,YELLOW,BLUE,PURPLE,GREEN,TEAL2,CORAL,YELLOW,BLUE]
+nodes = ''.join(f'<circle cx="{x}" cy="{y}" r="64" fill="{orbit_colors[i]}" opacity=".96"/><text x="{x}" y="{y+5}" text-anchor="middle" font-family="Arial" font-size="{14 if len(b)>8 else 16}" font-weight="700" fill="{foreground(orbit_colors[i])}">{b}</text>' for i,(b,(x,y)) in enumerate(zip(brands,coords)))
+save('competitor-orbit.svg', 'Ten-brand competitive orbit', 'The same fixed set is used across price, claims, Voice and maps', f'''<circle cx="600" cy="455" r="250" fill="none" stroke="#c7d9ee" stroke-width="3" stroke-dasharray="10 12"/>{nodes}<circle cx="600" cy="455" r="95" fill="{INK}"/><text x="600" y="445" text-anchor="middle" font-family="Arial" font-size="18" fill="{TEAL2}">TRIAL TARGET</text><text x="600" y="477" text-anchor="middle" font-family="Arial" font-size="25" font-weight="700" fill="white">RITUAL × PROOF</text><text x="70" y="735" font-family="Arial" font-size="18" fill="{MUTED}">Analytical set — not market-share ranking.</text>''')
 
 # 4 Price ladder
 prices = [("Twin Lotus",180),("Oral-B",135),("Sparkle",145),("Sensodyne",149),("Colgate",189),("DENTISTE'",231),("VUSSEN",360),("CURAPROX",395),("Marvis",435),("APAGARD",612)]
@@ -208,7 +234,7 @@ save('price-ladder.svg', 'Observed price ladder', 'THB per representative pack �
 
 # 5 Voice
 voice = [('Trust / proof',74),('Whitening',63),('Price / value',46),('Adverse experience',33),('Sensitivity',27),('Packaging',21),('Taste',18)]
-voicebars=''.join(f'<text x="80" y="{238+i*67}" font-family="Arial" font-size="19" fill="{INK}">{label}</text><rect x="320" y="{216+i*67}" width="650" height="34" rx="17" fill="#ded8cf"/><rect x="320" y="{216+i*67}" width="{pct*6.5}" height="34" rx="17" fill="{TEAL if i<3 else CORAL}"/><text x="995" y="{240+i*67}" font-family="Arial" font-size="22" font-weight="700" fill="{INK}">{pct}%</text>' for i,(label,pct) in enumerate(voice))
+voicebars=''.join(f'<text x="80" y="{238+i*67}" font-family="Arial" font-size="19" fill="{INK}">{label}</text><rect x="320" y="{216+i*67}" width="650" height="34" rx="17" fill="#dbe8f7"/><rect x="320" y="{216+i*67}" width="{pct*6.5}" height="34" rx="17" fill="{TEAL if i<3 else CORAL}"/><text x="995" y="{240+i*67}" font-family="Arial" font-size="22" font-weight="700" fill="{INK}">{pct}%</text>' for i,(label,pct) in enumerate(voice))
 save('customer-voice.svg', 'Customer Voice — 100 records', 'Directional convenience sample • multi-label themes', voicebars + f'<text x="80" y="735" font-family="Arial" font-size="18" fill="{MUTED}">66/100 records are Colgate Optic White; percentages are not population rates.</text>')
 
 # 6-8 Personas
@@ -225,8 +251,10 @@ save('winning-zone.svg','Winning Zone','Intersection, not empty whitespace',f'''
 # 10 Channels
 channels=['META','TIKTOK','GOOGLE / YT','LINE','MARKETPLACE','CREATOR','RETAIL','CLINIC','PR','EVENT']
 cc=[(250,250),(450,225),(650,230),(850,270),(980,410),(870,570),(665,610),(455,600),(250,560),(170,410)]
-channel_nodes=''.join(f'<circle cx="{x}" cy="{y}" r="62" fill="{[TEAL,CORAL,YELLOW,BLUE,PURPLE,GREEN,TEAL2,CORAL,YELLOW,BLUE][i]}"/><text x="{x}" y="{y+5}" text-anchor="middle" font-family="Arial" font-size="14" font-weight="700" fill="{INK}">{c}</text><line x1="600" y1="420" x2="{x}" y2="{y}" stroke="#c9c1b7" stroke-width="3"/>' for i,(c,(x,y)) in enumerate(zip(channels,cc)))
-save('channel-system.svg','All-channel learning system','Every channel has a role, owner and measurement path',channel_nodes+f'<circle cx="600" cy="420" r="108" fill="{INK}"/><text x="600" y="407" text-anchor="middle" font-family="Arial" font-size="16" fill="{TEAL2}">ONE SOURCE OF TRUTH</text><text x="600" y="442" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" fill="white">ORDER + CRM</text>')
+channel_colors = [TEAL,CORAL,YELLOW,BLUE,PURPLE,GREEN,TEAL2,CORAL,YELLOW,BLUE]
+channel_lines=''.join(f'<line x1="600" y1="420" x2="{x}" y2="{y}" stroke="#b9cde5" stroke-width="3"/>' for x,y in cc)
+channel_nodes=''.join(f'<circle cx="{x}" cy="{y}" r="62" fill="{channel_colors[i]}"/><text x="{x}" y="{y+5}" text-anchor="middle" font-family="Arial" font-size="14" font-weight="700" fill="{foreground(channel_colors[i])}">{c}</text>' for i,(c,(x,y)) in enumerate(zip(channels,cc)))
+save('channel-system.svg','All-channel learning system','Every channel has a role, owner and measurement path',channel_lines+channel_nodes+f'<circle cx="600" cy="420" r="108" fill="{INK}"/><text x="600" y="407" text-anchor="middle" font-family="Arial" font-size="16" fill="{TEAL2}">ONE SOURCE OF TRUTH</text><text x="600" y="442" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" fill="white">ORDER + CRM</text>')
 
 # 11 Budget
 alloc=[('Online',1800000,TEAL),('Creator / KOL',690000,CORAL),('Offline / O2O',360000,YELLOW),('Reserve',150000,BLUE)]
@@ -234,13 +262,22 @@ x=85
 blocks=[]
 for label,value,color in alloc:
     w=value/3000000*1010
-    blocks.append(f'<rect x="{x}" y="280" width="{w}" height="170" fill="{color}"/><text x="{x+18}" y="325" font-family="Arial" font-size="19" font-weight="700" fill="{INK}">{label}</text><text x="{x+18}" y="365" font-family="Arial" font-size="26" font-weight="700" fill="{INK}">{value:,}</text><text x="{x+18}" y="398" font-family="Arial" font-size="17" fill="{INK}">{value/3000000:.0%}</text>')
+    text_color = foreground(color)
+    blocks.append(f'<rect x="{x}" y="280" width="{w}" height="170" fill="{color}"/>')
+    if w >= 90:
+        display_label = 'Offline' if label == 'Offline / O2O' else label
+        display_value = f'{value:,}' if w >= 180 else f'{value // 1000}k'
+        label_size = 19 if w >= 180 else 14
+        value_size = 26 if w >= 180 else 20
+        blocks.append(f'<text x="{x+14}" y="325" font-family="Arial" font-size="{label_size}" font-weight="700" fill="{text_color}">{display_label}</text><text x="{x+14}" y="365" font-family="Arial" font-size="{value_size}" font-weight="700" fill="{text_color}">{display_value}</text><text x="{x+14}" y="398" font-family="Arial" font-size="16" fill="{text_color}">{value/3000000:.0%}</text>')
+    else:
+        blocks.append(f'<text x="{x+w/2}" y="370" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="{text_color}">{value/3000000:.0%}</text>')
     x+=w
 save('budget-allocation.svg','3,000,000 THB allocation','Three-month envelope • exact arithmetic', ''.join(blocks)+f'<text x="85" y="525" font-family="Arial" font-size="20" fill="{MUTED}">Base planning illustration: revenue / total-plan spend = 0.581×</text><text x="85" y="565" font-family="Arial" font-size="22" font-weight="700" fill="{CORAL}">Proof-first pilot — not forced month-end spending</text>')
 
 # 12 Timeline
 timeline=''.join(f'<circle cx="{105+i*88}" cy="410" r="{18 if i not in (3,7,11) else 28}" fill="{TEAL if i<4 else CORAL if i<8 else BLUE}"/><text x="{105+i*88}" y="465" text-anchor="middle" font-family="Arial" font-size="13" fill="{INK}">W{i+1}</text>' for i in range(12))
-save('timeline-90-days.svg','12-week execution track','Truth → proposition pilot → economics and repeat',f'<line x1="105" y1="410" x2="1073" y2="410" stroke="#c9c1b7" stroke-width="8"/>{timeline}<text x="105" y="300" font-family="Arial" font-size="24" font-weight="700" fill="{TEAL}">1–4 • TRUTH &amp; CONTROL</text><text x="430" y="345" font-family="Arial" font-size="24" font-weight="700" fill="{CORAL}">5–8 • PROPOSITION</text><text x="770" y="300" font-family="Arial" font-size="24" font-weight="700" fill="{BLUE}">9–12 • ECONOMICS / REPEAT</text><text x="105" y="560" font-family="Arial" font-size="18" fill="{MUTED}">Owner decision gates at readiness, mid-trial and end-trial.</text>')
+save('timeline-90-days.svg','12-week execution track','Truth → proposition pilot → economics and repeat',f'<line x1="105" y1="410" x2="1073" y2="410" stroke="#b9cde5" stroke-width="8"/>{timeline}<text x="105" y="300" font-family="Arial" font-size="24" font-weight="700" fill="{TEAL}">1–4 • TRUTH &amp; CONTROL</text><text x="430" y="345" font-family="Arial" font-size="24" font-weight="700" fill="{CORAL}">5–8 • PROPOSITION</text><text x="770" y="300" font-family="Arial" font-size="24" font-weight="700" fill="{BLUE}">9–12 • ECONOMICS / REPEAT</text><text x="105" y="560" font-family="Arial" font-size="18" fill="{MUTED}">Owner decision gates at readiness, mid-trial and end-trial.</text>')
 
 # 13 Evidence gate
 steps=[('CLAIM',TEAL),('PRODUCT\nEVIDENCE',YELLOW),('THAI\nREVIEW',CORAL),('OWNER\nAPPROVAL',BLUE),('PUBLISH',GREEN)]
@@ -253,7 +290,7 @@ for i,(label,color) in enumerate(steps):
         f'<tspan x="{x+82}" dy="{0 if j == 0 else 26}">{line}</tspan>'
         for j, line in enumerate(label_lines)
     )
-    gates.append(f'<rect x="{x}" y="300" width="165" height="150" rx="22" fill="{color}"/><text x="{x+82}" y="{y}" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="{INK}">{tspans}</text>')
+    gates.append(f'<rect x="{x}" y="300" width="165" height="150" rx="22" fill="{color}"/><text x="{x+82}" y="{y}" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="{foreground(color)}">{tspans}</text>')
     if i<4: gates.append(f'<path d="M{x+170} 375 H{x+210}" stroke="{INK}" stroke-width="5"/><path d="M{x+202} 365 L{x+216} 375 L{x+202} 385" fill="none" stroke="{INK}" stroke-width="5"/>')
 save('evidence-gate.svg','Claim governance gate','No health-adjacent statement skips evidence or owner approval',''.join(gates)+f'<text x="80" y="560" font-family="Arial" font-size="21" font-weight="700" fill="{CORAL}">STOP: unsupported efficacy, fake reviews, before–after, hidden conditions</text>')
 
@@ -267,7 +304,7 @@ visuals = [
     ('persona-appearance','persona-appearance.svg','Appearance persona'),
     ('persona-comfort','persona-comfort.svg','Comfort persona'),
     ('winning-zone','winning-zone.svg','Winning Zone'),
-    ('positioning','positioning-maps.png','Three positioning maps'),
+    ('positioning','positioning-maps.svg','Three positioning maps'),
     ('channels','channel-system.svg','All-channel system'),
     ('budget','budget-allocation.svg','Budget allocation'),
     ('timeline','timeline-90-days.svg','12-week timeline'),

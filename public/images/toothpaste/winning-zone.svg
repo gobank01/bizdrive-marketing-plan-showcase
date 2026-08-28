@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img">
 <title>Winning Zone</title><desc>Intersection, not empty whitespace</desc>
-<rect width="1200" height="800" fill="#f7f3eb"/>
-<text x="70" y="78" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2" fill="#137f73">BIZDRIVE • PREMIUM TOOTHPASTE</text>
-<text x="70" y="130" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#25211d">Winning Zone</text>
-<text x="70" y="165" font-family="Arial, sans-serif" font-size="20" fill="#756e66">Intersection, not empty whitespace</text>
-<g transform="translate(160 230)" font-family="Arial"><circle cx="280" cy="190" r="170" fill="#137f73" opacity=".55"/><circle cx="500" cy="190" r="170" fill="#df6b4f" opacity=".5"/><circle cx="390" cy="365" r="170" fill="#efc861" opacity=".55"/><text x="210" y="100" font-size="20" font-weight="700" fill="#25211d">CUSTOMER NEED</text><text x="500" y="100" font-size="20" font-weight="700" fill="#25211d">WHITESPACE</text><text x="390" y="500" text-anchor="middle" font-size="20" font-weight="700" fill="#25211d">RIGHT-TO-WIN + ECONOMICS + COMPLIANCE</text><circle cx="390" cy="250" r="82" fill="#25211d"/><text x="390" y="238" text-anchor="middle" font-size="16" fill="#9ed8cb">PRIMARY</text><text x="390" y="270" text-anchor="middle" font-size="22" font-weight="700" fill="white">RITUAL × PROOF</text></g>
+<rect width="1200" height="800" fill="#f4f8ff"/>
+<text x="70" y="78" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2" fill="#0067c5">BIZDRIVE • PREMIUM TOOTHPASTE</text>
+<text x="70" y="130" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#0b1f3a">Winning Zone</text>
+<text x="70" y="165" font-family="Arial, sans-serif" font-size="20" fill="#4b607b">Intersection, not empty whitespace</text>
+<g transform="translate(160 230)" font-family="Arial"><circle cx="280" cy="190" r="170" fill="#0067c5" opacity=".55"/><circle cx="500" cy="190" r="170" fill="#9a6500" opacity=".5"/><circle cx="390" cy="365" r="170" fill="#ffc928" opacity=".55"/><text x="210" y="100" font-size="20" font-weight="700" fill="#0b1f3a">CUSTOMER NEED</text><text x="500" y="100" font-size="20" font-weight="700" fill="#0b1f3a">WHITESPACE</text><text x="390" y="500" text-anchor="middle" font-size="20" font-weight="700" fill="#0b1f3a">RIGHT-TO-WIN + ECONOMICS + COMPLIANCE</text><circle cx="390" cy="250" r="82" fill="#0b1f3a"/><text x="390" y="238" text-anchor="middle" font-size="16" fill="#cfe4ff">PRIMARY</text><text x="390" y="270" text-anchor="middle" font-size="22" font-weight="700" fill="white">RITUAL × PROOF</text></g>
 </svg>

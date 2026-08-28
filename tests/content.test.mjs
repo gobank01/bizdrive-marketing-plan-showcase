@@ -152,6 +152,37 @@ test('uses local system font stacks without runtime Google Fonts', () => {
   assert.match(css, /system-ui/);
 });
 
+test('uses the BizDrive yellow blue and white visual system', () => {
+  const css = source('app/globals.css').toLowerCase();
+  const generator = source('scripts/generate-content.py').toLowerCase();
+  const icon = source('app/icon.svg').toLowerCase();
+  for (const color of ['#0067c5', '#ffc928', '#ffffff']) {
+    assert.match(css, new RegExp(color), `missing ${color} in CSS`);
+    assert.match(generator, new RegExp(color), `missing ${color} in generator`);
+    assert.match(icon, new RegExp(color), `missing ${color} in icon`);
+  }
+  const legacy = /#137f73|#df6b4f|#f7f3eb|#fffdf8|#efc861|#5888be|#8f6cb6|#69a66f/i;
+  assert.doesNotMatch(css, legacy);
+  assert.doesNotMatch(generator, legacy);
+  assert.doesNotMatch(icon, legacy);
+  const config = json(join(content, 'config.json'));
+  assert.match(config.visuals.find((visual) => visual.id === 'positioning').src, /\.svg$/);
+  const positioning = source('public/images/toothpaste/positioning-maps.svg');
+  assert.match(positioning, /yellow dashed area/i);
+  assert.doesNotMatch(positioning, /green dashed area/i);
+
+  const channel = source('public/images/toothpaste/channel-system.svg');
+  assert.ok(channel.indexOf('<line') < channel.indexOf('<circle'), 'channel connectors must render behind nodes');
+  assert.match(channel, /fill="#0067c5"[^>]*\/><text[^>]*fill="#ffffff">META</);
+  assert.match(channel, /fill="#ffc928"[^>]*\/><text[^>]*fill="#0b1f3a">GOOGLE \/ YT</);
+  const budget = source('public/images/toothpaste/budget-allocation.svg');
+  assert.match(budget, /fill="#0067c5"\/><text[^>]*fill="#ffffff">Online</);
+  assert.match(budget, /fill="#ffc928"\/><text[^>]*fill="#0b1f3a">Offline</);
+  const evidenceGate = source('public/images/toothpaste/evidence-gate.svg');
+  assert.match(evidenceGate, /fill="#0067c5"\/><text[^>]*fill="#ffffff"><tspan[^>]*>CLAIM/);
+  assert.match(evidenceGate, /fill="#ffc928"\/><text[^>]*fill="#0b1f3a"><tspan[^>]*>PRODUCT/);
+});
+
 test('generator and browser QA are portable', () => {
   const generator = source('scripts/generate-content.py');
   assert.doesNotMatch(generator, /\/Users\/macminibot/);
