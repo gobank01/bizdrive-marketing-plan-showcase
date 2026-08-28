@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img">
+<title>Premium that earns the ritual</title><desc>Daily sensorial experience × inspectable proof</desc>
+<rect width="1200" height="800" fill="#f7f3eb"/>
+<text x="70" y="78" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2" fill="#137f73">BIZDRIVE • PREMIUM TOOTHPASTE</text>
+<text x="70" y="130" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#25211d">Premium that earns the ritual</text>
+<text x="70" y="165" font-family="Arial, sans-serif" font-size="20" fill="#756e66">Daily sensorial experience × inspectable proof</text>
+
+<circle cx="910" cy="390" r="250" fill="#9ed8cb" opacity=".45"/>
+<path d="M130 520 C260 390 395 360 520 465 S780 650 1030 500" fill="none" stroke="#df6b4f" stroke-width="8" stroke-linecap="round"/>
+<g transform="translate(420 250) rotate(-12)"><rect x="0" y="0" width="180" height="360" rx="36" fill="#fffdf8" stroke="#25211d" stroke-width="5"/><rect x="32" y="50" width="116" height="72" rx="12" fill="#137f73"/><text x="90" y="82" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="white">350 THB</text><text x="90" y="105" text-anchor="middle" font-family="Arial" font-size="13" fill="white">TRIAL CONCEPT</text><path d="M52 165 Q90 130 128 165 Q90 205 52 165" fill="none" stroke="#df6b4f" stroke-width="8"/><rect x="55" y="330" width="70" height="55" rx="10" fill="#25211d"/></g>
+<g transform="translate(700 310) rotate(18)"><rect x="0" y="0" width="34" height="330" rx="17" fill="#25211d"/><rect x="-8" y="-35" width="50" height="95" rx="20" fill="#efc861"/><path d="M-2 -18h38M-2 0h38M-2 18h38" stroke="#25211d" stroke-width="4"/></g>
+<g font-family="Arial" font-weight="700"><circle cx="900" cy="275" r="58" fill="#fffdf8" stroke="#137f73" stroke-width="4"/><text x="900" y="268" text-anchor="middle" font-size="15" fill="#756e66">PROOF</text><text x="900" y="292" text-anchor="middle" font-size="22" fill="#137f73">VISIBLE</text><circle cx="965" cy="500" r="58" fill="#fffdf8" stroke="#df6b4f" stroke-width="4"/><text x="965" y="493" text-anchor="middle" font-size="15" fill="#756e66">RITUAL</text><text x="965" y="517" text-anchor="middle" font-size="22" fill="#df6b4f">DAILY</text></g>
+<text x="70" y="710" font-family="Arial" font-size="28" font-weight="700" fill="#25211d">Winning Zone</text><text x="70" y="750" font-family="Arial" font-size="23" fill="#756e66">Premium daily ritual × proof transparency</text>
+</svg>

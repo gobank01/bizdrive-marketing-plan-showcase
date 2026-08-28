@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1350" height="1320" viewBox="0 0 1350 1320">
+<rect width="100%" height="100%" fill="#fafafa"/>
+<style>text{font-family:Arial,"Noto Sans Thai",sans-serif}.t{font-size:18px;font-weight:700}.a{font-size:12px;fill:#333}.l{font-size:11px}.n{font-size:13px;font-weight:700}.z{font-size:10px;font-weight:700;fill:#166534}.q{font-size:10px;font-weight:700;fill:#065f46}</style>
+<text x="50" y="38" class="n">Premium toothpaste positioning maps — analytical rubric, not measured market facts</text>
+<text x="60" y="60" class="t">Map 1: Price tier vs proof</text>
+<line x1="60.0" y1="80" x2="60.0" y2="470" stroke="#ddd"/>
+<line x1="60" y1="470.0" x2="450" y2="470.0" stroke="#ddd"/>
+<text x="60.0" y="488" text-anchor="middle" class="a">1</text>
+<text x="48" y="474.0" text-anchor="end" class="a">1</text>
+<line x1="157.5" y1="80" x2="157.5" y2="470" stroke="#ddd"/>
+<line x1="60" y1="372.5" x2="450" y2="372.5" stroke="#ddd"/>
+<text x="157.5" y="488" text-anchor="middle" class="a">2</text>
+<text x="48" y="376.5" text-anchor="end" class="a">2</text>
+<line x1="255.0" y1="80" x2="255.0" y2="470" stroke="#ddd"/>
+<line x1="60" y1="275.0" x2="450" y2="275.0" stroke="#ddd"/>
+<text x="255.0" y="488" text-anchor="middle" class="a">3</text>
+<text x="48" y="279.0" text-anchor="end" class="a">3</text>
+<line x1="352.5" y1="80" x2="352.5" y2="470" stroke="#ddd"/>
+<line x1="60" y1="177.5" x2="450" y2="177.5" stroke="#ddd"/>
+<text x="352.5" y="488" text-anchor="middle" class="a">4</text>
+<text x="48" y="181.5" text-anchor="end" class="a">4</text>
+<line x1="450.0" y1="80" x2="450.0" y2="470" stroke="#ddd"/>
+<line x1="60" y1="80.0" x2="450" y2="80.0" stroke="#ddd"/>
+<text x="450.0" y="488" text-anchor="middle" class="a">5</text>
+<text x="48" y="84.0" text-anchor="end" class="a">5</text>
+<rect x="290.79999999999995" y="96.0" width="89.50000000000006" height="143.20000000000002" rx="8" fill="#bbf7d0" fill-opacity="0.50" stroke="#16a34a" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="295.79999999999995" y="110.0" class="z">Winning Zone*</text>
+<rect x="60" y="80" width="390" height="390" fill="none" stroke="#555"/>
+<text x="255.0" y="512" text-anchor="middle" class="a">price tier (1 low → 5 high)</text>
+<text transform="translate(17,275.0) rotate(-90)" text-anchor="middle" class="a">proof strength (1 low → 5 high)</text>
+<circle cx="336.5" cy="267.0" r="9" fill="#2563eb" stroke="white" stroke-width="2"/>
+<text x="336.5" y="271.0" text-anchor="middle" class="l" fill="white">1</text>
+<circle cx="434.0" cy="356.5" r="9" fill="#7c3aed" stroke="white" stroke-width="2"/>
+<text x="434.0" y="360.5" text-anchor="middle" class="l" fill="white">2</text>
+<circle cx="442.0" cy="177.5" r="9" fill="#db2777" stroke="white" stroke-width="2"/>
+<text x="442.0" y="181.5" text-anchor="middle" class="l" fill="white">3</text>
+<circle cx="426.0" cy="185.5" r="9" fill="#0891b2" stroke="white" stroke-width="2"/>
+<text x="426.0" y="189.5" text-anchor="middle" class="l" fill="white">4</text>
+<circle cx="344.5" cy="275.0" r="9" fill="#d97706" stroke="white" stroke-width="2"/>
+<text x="344.5" y="279.0" text-anchor="middle" class="l" fill="white">5</text>
+<circle cx="173.5" cy="96.0" r="9" fill="#16a34a" stroke="white" stroke-width="2"/>
+<text x="173.5" y="100.0" text-anchor="middle" class="l" fill="white">6</text>
+<circle cx="157.5" cy="193.5" r="9" fill="#dc2626" stroke="white" stroke-width="2"/>
+<text x="157.5" y="197.5" text-anchor="middle" class="l" fill="white">7</text>
+<circle cx="165.5" cy="193.5" r="9" fill="#4f46e5" stroke="white" stroke-width="2"/>
+<text x="165.5" y="197.5" text-anchor="middle" class="l" fill="white">8</text>
+<circle cx="263.0" cy="283.0" r="9" fill="#9333ea" stroke="white" stroke-width="2"/>
+<text x="263.0" y="287.0" text-anchor="middle" class="l" fill="white">9</text>
+<circle cx="157.5" cy="356.5" r="9" fill="#65a30d" stroke="white" stroke-width="2"/>
+<text x="157.5" y="360.5" text-anchor="middle" class="l" fill="white">10</text>
+<polygon points="344.5,155.59999999999997 356.5,167.59999999999997 344.5,179.59999999999997 332.5,167.59999999999997" fill="#059669" stroke="white" stroke-width="2"/>
+<text x="344.5" y="171.59999999999997" text-anchor="middle" class="l" fill="white">T</text>
+<text x="359.5" y="165.59999999999997" class="q">Trial target*</text>
+<text x="480" y="60" class="t">Map 2: Functional vs lifestyle</text>
+<line x1="480.0" y1="80" x2="480.0" y2="470" stroke="#ddd"/>
+<line x1="480" y1="470.0" x2="870" y2="470.0" stroke="#ddd"/>
+<text x="480.0" y="488" text-anchor="middle" class="a">1</text>
+<text x="468" y="474.0" text-anchor="end" class="a">1</text>
+<line x1="577.5" y1="80" x2="577.5" y2="470" stroke="#ddd"/>
+<line x1="480" y1="372.5" x2="870" y2="372.5" stroke="#ddd"/>
+<text x="577.5" y="488" text-anchor="middle" class="a">2</text>
+<text x="468" y="376.5" text-anchor="end" class="a">2</text>
+<line x1="675.0" y1="80" x2="675.0" y2="470" stroke="#ddd"/>
+<line x1="480" y1="275.0" x2="870" y2="275.0" stroke="#ddd"/>
+<text x="675.0" y="488" text-anchor="middle" class="a">3</text>
+<text x="468" y="279.0" text-anchor="end" class="a">3</text>
+<line x1="772.5" y1="80" x2="772.5" y2="470" stroke="#ddd"/>
+<line x1="480" y1="177.5" x2="870" y2="177.5" stroke="#ddd"/>
+<text x="772.5" y="488" text-anchor="middle" class="a">4</text>
+<text x="468" y="181.5" text-anchor="end" class="a">4</text>
+<line x1="870.0" y1="80" x2="870.0" y2="470" stroke="#ddd"/>
+<line x1="480" y1="80.0" x2="870" y2="80.0" stroke="#ddd"/>
+<text x="870.0" y="488" text-anchor="middle" class="a">5</text>
+<text x="468" y="84.0" text-anchor="end" class="a">5</text>
+<rect x="585.5" y="96.0" width="134.25" height="89.5" rx="8" fill="#bbf7d0" fill-opacity="0.50" stroke="#16a34a" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="590.5" y="110.0" class="z">Winning Zone*</text>
+<rect x="480" y="80" width="390" height="390" fill="none" stroke="#555"/>
+<text x="675.0" y="512" text-anchor="middle" class="a">therapeutic/functional (1→5)</text>
+<text transform="translate(437,275.0) rotate(-90)" text-anchor="middle" class="a">lifestyle/sensorial (1→5)</text>
+<circle cx="667.0" cy="177.5" r="9" fill="#2563eb" stroke="white" stroke-width="2"/>
+<text x="667.0" y="181.5" text-anchor="middle" class="l" fill="white">1</text>
+<circle cx="496.0" cy="88.0" r="9" fill="#7c3aed" stroke="white" stroke-width="2"/>
+<text x="496.0" y="92.0" text-anchor="middle" class="l" fill="white">2</text>
+<circle cx="862.0" cy="356.5" r="9" fill="#db2777" stroke="white" stroke-width="2"/>
+<text x="862.0" y="360.5" text-anchor="middle" class="l" fill="white">3</text>
+<circle cx="756.5" cy="275.0" r="9" fill="#0891b2" stroke="white" stroke-width="2"/>
+<text x="756.5" y="279.0" text-anchor="middle" class="l" fill="white">4</text>
+<circle cx="764.5" cy="275.0" r="9" fill="#d97706" stroke="white" stroke-width="2"/>
+<text x="764.5" y="279.0" text-anchor="middle" class="l" fill="white">5</text>
+<circle cx="862.0" cy="454.0" r="9" fill="#16a34a" stroke="white" stroke-width="2"/>
+<text x="862.0" y="458.0" text-anchor="middle" class="l" fill="white">6</text>
+<circle cx="756.5" cy="372.5" r="9" fill="#dc2626" stroke="white" stroke-width="2"/>
+<text x="756.5" y="376.5" text-anchor="middle" class="l" fill="white">7</text>
+<circle cx="764.5" cy="372.5" r="9" fill="#4f46e5" stroke="white" stroke-width="2"/>
+<text x="764.5" y="376.5" text-anchor="middle" class="l" fill="white">8</text>
+<circle cx="683.0" cy="193.5" r="9" fill="#9333ea" stroke="white" stroke-width="2"/>
+<text x="683.0" y="197.5" text-anchor="middle" class="l" fill="white">9</text>
+<circle cx="667.0" cy="267.0" r="9" fill="#65a30d" stroke="white" stroke-width="2"/>
+<text x="667.0" y="271.0" text-anchor="middle" class="l" fill="white">10</text>
+<polygon points="657.1,119.80000000000001 669.1,131.8 657.1,143.8 645.1,131.8" fill="#059669" stroke="white" stroke-width="2"/>
+<text x="657.1" y="135.8" text-anchor="middle" class="l" fill="white">T</text>
+<text x="672.1" y="129.8" class="q">Trial target*</text>
+<text x="900" y="60" class="t">Map 3: Accessibility vs exclusivity</text>
+<line x1="900.0" y1="80" x2="900.0" y2="470" stroke="#ddd"/>
+<line x1="900" y1="470.0" x2="1290" y2="470.0" stroke="#ddd"/>
+<text x="900.0" y="488" text-anchor="middle" class="a">1</text>
+<text x="888" y="474.0" text-anchor="end" class="a">1</text>
+<line x1="997.5" y1="80" x2="997.5" y2="470" stroke="#ddd"/>
+<line x1="900" y1="372.5" x2="1290" y2="372.5" stroke="#ddd"/>
+<text x="997.5" y="488" text-anchor="middle" class="a">2</text>
+<text x="888" y="376.5" text-anchor="end" class="a">2</text>
+<line x1="1095.0" y1="80" x2="1095.0" y2="470" stroke="#ddd"/>
+<line x1="900" y1="275.0" x2="1290" y2="275.0" stroke="#ddd"/>
+<text x="1095.0" y="488" text-anchor="middle" class="a">3</text>
+<text x="888" y="279.0" text-anchor="end" class="a">3</text>
+<line x1="1192.5" y1="80" x2="1192.5" y2="470" stroke="#ddd"/>
+<line x1="900" y1="177.5" x2="1290" y2="177.5" stroke="#ddd"/>
+<text x="1192.5" y="488" text-anchor="middle" class="a">4</text>
+<text x="888" y="181.5" text-anchor="end" class="a">4</text>
+<line x1="1290.0" y1="80" x2="1290.0" y2="470" stroke="#ddd"/>
+<line x1="900" y1="80.0" x2="1290" y2="80.0" stroke="#ddd"/>
+<text x="1290.0" y="488" text-anchor="middle" class="a">5</text>
+<text x="888" y="84.0" text-anchor="end" class="a">5</text>
+<rect x="1095.0" y="158.65000000000003" width="107.40000000000009" height="116.34999999999997" rx="8" fill="#bbf7d0" fill-opacity="0.50" stroke="#16a34a" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="1100.0" y="172.65000000000003" class="z">Winning Zone*</text>
+<rect x="900" y="80" width="390" height="390" fill="none" stroke="#555"/>
+<text x="1095.0" y="512" text-anchor="middle" class="a">mass accessibility (1→5)</text>
+<text transform="translate(857,275.0) rotate(-90)" text-anchor="middle" class="a">premium exclusivity (1→5)</text>
+<circle cx="1176.5" cy="356.5" r="9" fill="#2563eb" stroke="white" stroke-width="2"/>
+<text x="1176.5" y="360.5" text-anchor="middle" class="l" fill="white">1</text>
+<circle cx="1005.5" cy="88.0" r="9" fill="#7c3aed" stroke="white" stroke-width="2"/>
+<text x="1005.5" y="92.0" text-anchor="middle" class="l" fill="white">2</text>
+<circle cx="1013.5" cy="88.0" r="9" fill="#db2777" stroke="white" stroke-width="2"/>
+<text x="1013.5" y="92.0" text-anchor="middle" class="l" fill="white">3</text>
+<circle cx="997.5" cy="185.5" r="9" fill="#0891b2" stroke="white" stroke-width="2"/>
+<text x="997.5" y="189.5" text-anchor="middle" class="l" fill="white">4</text>
+<circle cx="1005.5" cy="185.5" r="9" fill="#d97706" stroke="white" stroke-width="2"/>
+<text x="1005.5" y="189.5" text-anchor="middle" class="l" fill="white">5</text>
+<circle cx="1282.0" cy="454.0" r="9" fill="#16a34a" stroke="white" stroke-width="2"/>
+<text x="1282.0" y="458.0" text-anchor="middle" class="l" fill="white">6</text>
+<circle cx="1266.0" cy="462.0" r="9" fill="#dc2626" stroke="white" stroke-width="2"/>
+<text x="1266.0" y="466.0" text-anchor="middle" class="l" fill="white">7</text>
+<circle cx="1184.5" cy="372.5" r="9" fill="#4f46e5" stroke="white" stroke-width="2"/>
+<text x="1184.5" y="376.5" text-anchor="middle" class="l" fill="white">8</text>
+<circle cx="1192.5" cy="372.5" r="9" fill="#9333ea" stroke="white" stroke-width="2"/>
+<text x="1192.5" y="376.5" text-anchor="middle" class="l" fill="white">9</text>
+<circle cx="1176.5" cy="356.5" r="9" fill="#65a30d" stroke="white" stroke-width="2"/>
+<text x="1176.5" y="360.5" text-anchor="middle" class="l" fill="white">10</text>
+<polygon points="1148.7,200.35 1160.7,212.35 1148.7,224.35 1136.7,212.35" fill="#059669" stroke="white" stroke-width="2"/>
+<text x="1148.7" y="216.35" text-anchor="middle" class="l" fill="white">T</text>
+<text x="1163.7" y="210.35" class="q">Trial target*</text>
+<text x="60" y="540" class="t">Rubric and rationale</text>
+<text x="60" y="570" class="a">• Points are numbered 1–10 and map to the brand legend below. Scores use a 1–5 analytical rubric from observed price/positioning, official claim specificity, channel relevance and current source packet.</text>
+<text x="60" y="592" class="a">• Proof strength is not a clinical quality judgment; it scores traceability/specificity visible in this audit.</text>
+<text x="60" y="614" class="a">• Observed price is a dated snapshot where available; missing Thai price is treated as tier estimate and must be refreshed before decisions.</text>
+<text x="60" y="636" class="a">• Same 10 brands are used across competitor matrix, Customer Voice, maps and strategic analysis.</text>
+<polygon points="70,656 78,664 70,672 62,664" fill="#059669"/>
+<text x="85" y="668" class="a">T / green dashed area = provisional trial target and Winning Zone; conditional on formula, proof, WTP, unit economics and Thai compliance gates.</text>
+<circle cx="70" cy="715" r="6" fill="#2563eb"/>
+<text x="85" y="720" class="n">1. DENTISTE&#x27;</text>
+<text x="240" y="720" class="a">price 4; proof 3; functional 3; lifestyle 4; access 4; exclusivity 2</text>
+<text x="240" y="737" class="l">freshness/night and premium lifestyle; widely relevant in Thailand but premium selective</text>
+<circle cx="70" cy="767" r="6" fill="#7c3aed"/>
+<text x="85" y="772" class="n">2. Marvis</text>
+<text x="240" y="772" class="a">price 5; proof 2; functional 1; lifestyle 5; access 2; exclusivity 5</text>
+<text x="240" y="789" class="l">strong flavor/design/lifestyle emphasis; specialty/import orientation</text>
+<circle cx="70" cy="819" r="6" fill="#db2777"/>
+<text x="85" y="824" class="n">3. APAGARD</text>
+<text x="240" y="824" class="a">price 5; proof 4; functional 5; lifestyle 2; access 2; exclusivity 5</text>
+<text x="240" y="841" class="l">functional/mineral technology led; imported specialty access</text>
+<circle cx="70" cy="871" r="6" fill="#0891b2"/>
+<text x="85" y="876" class="n">4. CURAPROX Enzycal</text>
+<text x="240" y="876" class="a">price 5; proof 4; functional 4; lifestyle 3; access 2; exclusivity 4</text>
+<text x="240" y="893" class="l">functional with refined design; clinic/specialty selective access</text>
+<circle cx="70" cy="923" r="6" fill="#d97706"/>
+<text x="85" y="928" class="n">5. VUSSEN</text>
+<text x="240" y="928" class="a">price 4; proof 3; functional 4; lifestyle 3; access 2; exclusivity 4</text>
+<text x="240" y="945" class="l">functional whitening with K-beauty context; import/specialty availability</text>
+<circle cx="70" cy="975" r="6" fill="#16a34a"/>
+<text x="85" y="980" class="n">6. Sensodyne</text>
+<text x="240" y="980" class="a">price 2; proof 5; functional 5; lifestyle 1; access 5; exclusivity 1</text>
+<text x="240" y="997" class="l">strong therapeutic function; high pharmacy/mass accessibility</text>
+<circle cx="70" cy="1027" r="6" fill="#dc2626"/>
+<text x="85" y="1032" class="n">7. Colgate Optic White</text>
+<text x="240" y="1032" class="a">price 2; proof 4; functional 4; lifestyle 2; access 5; exclusivity 1</text>
+<text x="240" y="1049" class="l">functional whitening plus mass brand; high mass/marketplace accessibility</text>
+<circle cx="70" cy="1079" r="6" fill="#4f46e5"/>
+<text x="85" y="1084" class="n">8. Oral-B/Crest 3D White</text>
+<text x="240" y="1084" class="a">price 2; proof 4; functional 4; lifestyle 2; access 4; exclusivity 2</text>
+<text x="240" y="1101" class="l">functional whitening; broad international/mass access, Thai variant availability varies</text>
+<circle cx="70" cy="1131" r="6" fill="#9333ea"/>
+<text x="85" y="1136" class="n">9. Sparkle</text>
+<text x="240" y="1136" class="a">price 3; proof 3; functional 3; lifestyle 4; access 4; exclusivity 2</text>
+<text x="240" y="1153" class="l">beauty/lifestyle plus function; Thai retail/e-commerce relevance</text>
+<circle cx="70" cy="1183" r="6" fill="#65a30d"/>
+<text x="85" y="1188" class="n">10. Twin Lotus</text>
+<text x="240" y="1188" class="a">price 2; proof 2; functional 3; lifestyle 3; access 4; exclusivity 2</text>
+<text x="240" y="1205" class="l">herbal functional and familiar lifestyle; broad Thai relevance</text>
+</svg>

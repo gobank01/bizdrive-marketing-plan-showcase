@@ -1,0 +1,105 @@
+{
+  "summary": {
+    "monthly_budget_thb": 1000000,
+    "duration_months": 3,
+    "total_budget_thb": 3000000,
+    "product_type": "fmcg",
+    "channel_mix_pct": {
+      "online": 60,
+      "offline": 12,
+      "kol": 23,
+      "reserve": 5
+    },
+    "status": "heuristic_pending_research_validation"
+  },
+  "allocation_thb": {
+    "online": 1800000,
+    "offline": 360000,
+    "kol": 690000,
+    "reserve": 150000,
+    "online_sub": {
+      "meta": 900000,
+      "tiktok": 540000,
+      "google_youtube": 144000,
+      "line": 126000,
+      "other": 90000
+    }
+  },
+  "scenario_performance_multipliers": {
+    "best": {
+      "probability_pct": 20,
+      "cost": 0.8,
+      "conversion": 1.3,
+      "reach": 1.25,
+      "roas": 1.5
+    },
+    "base": {
+      "probability_pct": 60,
+      "cost": 1.0,
+      "conversion": 1.0,
+      "reach": 1.0,
+      "roas": 1.0
+    },
+    "worst": {
+      "probability_pct": 20,
+      "cost": 1.3,
+      "conversion": 0.75,
+      "reach": 0.8,
+      "roas": 0.6
+    }
+  },
+  "warning": "Scenario multipliers are planning heuristics, not forecasts; replace or corroborate with category evidence.",
+  "detailed_channel_allocation_thb": {
+    "Meta Facebook/Instagram": 900000,
+    "TikTok": 540000,
+    "Google Search and YouTube": 144000,
+    "LINE OA and LINE Ads": 126000,
+    "SEO owned and marketplace tests": 90000,
+    "Creator/KOL": 690000,
+    "Retail sampling": 120000,
+    "Dental-clinic pilot": 90000,
+    "Small events/pop-up": 60000,
+    "PR/earned asset and briefing": 45000,
+    "Trade materials/training": 30000,
+    "O2O tracking/printing": 15000,
+    "Reserve/flex": 150000
+  },
+  "detailed_total_check_thb": 3000000,
+  "scenario_illustration": {
+    "label": "planning illustration, not forecast",
+    "formula": "clicks=2490000/CPC; units=clicks*CVR; revenue=units*350; total_plan_ROAS=revenue/3000000",
+    "unknown_break_even_inputs": [
+      "COGS",
+      "gross margin",
+      "VAT treatment",
+      "marketplace/payment/fulfillment fees",
+      "discounts",
+      "returns/refunds",
+      "capacity"
+    ],
+    "best": {
+      "assumed_cpc_thb": 6,
+      "assumed_cvr": 0.03,
+      "clicks": 415000,
+      "units": 12450,
+      "revenue_thb": 4357500,
+      "total_plan_roas": 1.452
+    },
+    "base": {
+      "assumed_cpc_thb": 9,
+      "assumed_cvr": 0.018,
+      "clicks": 276667,
+      "units": 4980,
+      "revenue_thb": 1743000,
+      "total_plan_roas": 0.581
+    },
+    "worst": {
+      "assumed_cpc_thb": 13.5,
+      "assumed_cvr": 0.008,
+      "clicks": 184444,
+      "units": 1476,
+      "revenue_thb": 516600,
+      "total_plan_roas": 0.172
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "slug": "ยาสีฟัน",
+  "route": "/toothpaste",
+  "title": "แผนการตลาดยาสีฟันพรีเมียม",
+  "priceThb": 350,
+  "monthlyBudgetThb": 1000000,
+  "durationMonths": 3,
+  "totalBudgetThb": 3000000,
+  "researchDate": "2026-08-28",
+  "status": "Research trial — not launch approval",
+  "primaryWinningZone": "Premium daily ritual × proof transparency",
+  "secondaryTerritory": "Gentle-brightening experience without overclaim",
+  "visuals": [
+    {
+      "id": "hero",
+      "src": "images/toothpaste/hero-ritual.svg",
+      "alt": "Premium daily ritual"
+    },
+    {
+      "id": "market",
+      "src": "images/toothpaste/market-landscape.svg",
+      "alt": "Category landscape"
+    },
+    {
+      "id": "competitors",
+      "src": "images/toothpaste/competitor-orbit.svg",
+      "alt": "Ten-brand orbit"
+    },
+    {
+      "id": "prices",
+      "src": "images/toothpaste/price-ladder.svg",
+      "alt": "Observed price ladder"
+    },
+    {
+      "id": "voice",
+      "src": "images/toothpaste/customer-voice.svg",
+      "alt": "Customer Voice themes"
+    },
+    {
+      "id": "persona-ritual",
+      "src": "images/toothpaste/persona-ritual.svg",
+      "alt": "Ritual & Proof persona"
+    },
+    {
+      "id": "persona-appearance",
+      "src": "images/toothpaste/persona-appearance.svg",
+      "alt": "Appearance persona"
+    },
+    {
+      "id": "persona-comfort",
+      "src": "images/toothpaste/persona-comfort.svg",
+      "alt": "Comfort persona"
+    },
+    {
+      "id": "winning-zone",
+      "src": "images/toothpaste/winning-zone.svg",
+      "alt": "Winning Zone"
+    },
+    {
+      "id": "positioning",
+      "src": "images/toothpaste/positioning-maps.png",
+      "alt": "Three positioning maps"
+    },
+    {
+      "id": "channels",
+      "src": "images/toothpaste/channel-system.svg",
+      "alt": "All-channel system"
+    },
+    {
+      "id": "budget",
+      "src": "images/toothpaste/budget-allocation.svg",
+      "alt": "Budget allocation"
+    },
+    {
+      "id": "timeline",
+      "src": "images/toothpaste/timeline-90-days.svg",
+      "alt": "12-week timeline"
+    },
+    {
+      "id": "evidence-gate",
+      "src": "images/toothpaste/evidence-gate.svg",
+      "alt": "Evidence and approval gate"
+    }
+  ]
+}

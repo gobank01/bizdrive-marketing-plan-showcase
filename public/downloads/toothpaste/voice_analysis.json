@@ -1,0 +1,211 @@
+{
+  "n": 100,
+  "overall_themes": {
+    "trust_proof": {
+      "count": 74,
+      "pct": 74.0
+    },
+    "whitening_expectations": {
+      "count": 63,
+      "pct": 63.0
+    },
+    "price_value": {
+      "count": 46,
+      "pct": 46.0
+    },
+    "adverse_experience": {
+      "count": 33,
+      "pct": 33.0
+    },
+    "sensitivity": {
+      "count": 27,
+      "pct": 27.0
+    },
+    "packaging": {
+      "count": 21,
+      "pct": 21.0
+    },
+    "taste": {
+      "count": 18,
+      "pct": 18.0
+    },
+    "ingredients": {
+      "count": 16,
+      "pct": 16.0
+    },
+    "repurchase": {
+      "count": 14,
+      "pct": 14.0
+    },
+    "availability": {
+      "count": 9,
+      "pct": 9.0
+    },
+    "foam_texture": {
+      "count": 7,
+      "pct": 7.0
+    },
+    "freshness_duration": {
+      "count": 6,
+      "pct": 6.0
+    }
+  },
+  "sentiment": {
+    "negative": {
+      "count": 45,
+      "pct": 45.0
+    },
+    "positive": {
+      "count": 28,
+      "pct": 28.0
+    },
+    "neutral": {
+      "count": 21,
+      "pct": 21.0
+    },
+    "mixed": {
+      "count": 6,
+      "pct": 6.0
+    }
+  },
+  "by_brand": {
+    "DENTISTE'": {
+      "n": 0,
+      "themes": {},
+      "sentiment": {}
+    },
+    "Marvis": {
+      "n": 8,
+      "themes": {
+        "whitening_expectations": 7,
+        "price_value": 6,
+        "taste": 4,
+        "trust_proof": 3,
+        "ingredients": 2,
+        "adverse_experience": 1,
+        "packaging": 1,
+        "repurchase": 1
+      },
+      "sentiment": {
+        "mixed": 1,
+        "neutral": 3,
+        "negative": 1,
+        "positive": 3
+      }
+    },
+    "APAGARD": {
+      "n": 6,
+      "themes": {
+        "trust_proof": 5,
+        "ingredients": 3,
+        "price_value": 3,
+        "packaging": 2,
+        "sensitivity": 2,
+        "foam_texture": 1,
+        "adverse_experience": 1,
+        "taste": 1,
+        "availability": 1,
+        "repurchase": 1
+      },
+      "sentiment": {
+        "positive": 1,
+        "mixed": 2,
+        "neutral": 3
+      }
+    },
+    "CURAPROX Enzycal": {
+      "n": 4,
+      "themes": {
+        "trust_proof": 4
+      },
+      "sentiment": {
+        "neutral": 4
+      }
+    },
+    "VUSSEN": {
+      "n": 2,
+      "themes": {
+        "trust_proof": 2
+      },
+      "sentiment": {
+        "neutral": 2
+      }
+    },
+    "Sensodyne": {
+      "n": 5,
+      "themes": {
+        "whitening_expectations": 3,
+        "trust_proof": 3,
+        "price_value": 2,
+        "sensitivity": 1,
+        "ingredients": 1,
+        "foam_texture": 1
+      },
+      "sentiment": {
+        "positive": 2,
+        "neutral": 3
+      }
+    },
+    "Colgate Optic White": {
+      "n": 66,
+      "themes": {
+        "trust_proof": 53,
+        "whitening_expectations": 51,
+        "price_value": 34,
+        "adverse_experience": 31,
+        "sensitivity": 23,
+        "packaging": 17,
+        "repurchase": 11,
+        "taste": 11,
+        "ingredients": 9,
+        "availability": 8,
+        "freshness_duration": 6,
+        "foam_texture": 5
+      },
+      "sentiment": {
+        "negative": 44,
+        "positive": 16,
+        "mixed": 3,
+        "neutral": 3
+      }
+    },
+    "Oral-B/Crest 3D White": {
+      "n": 7,
+      "themes": {
+        "trust_proof": 4,
+        "whitening_expectations": 2,
+        "taste": 2,
+        "sensitivity": 1,
+        "repurchase": 1,
+        "price_value": 1
+      },
+      "sentiment": {
+        "positive": 5,
+        "neutral": 2
+      }
+    },
+    "Sparkle": {
+      "n": 0,
+      "themes": {},
+      "sentiment": {}
+    },
+    "Twin Lotus": {
+      "n": 2,
+      "themes": {
+        "ingredients": 1,
+        "packaging": 1
+      },
+      "sentiment": {
+        "neutral": 1,
+        "positive": 1
+      }
+    }
+  },
+  "limitations": [
+    "Convenience sample is directional, not representative market research.",
+    "60/100 records come from one public review site and one brand (Colgate Optic White), so adverse-experience and whitening themes are likely overrepresented.",
+    "40/100 records are public video comments across eight brands; platform does not expose verified-purchase status and some are purchase questions rather than post-use reviews.",
+    "No sufficiently specific public comments were retained for DENTISTE or Sparkle; VUSSEN has only two records. Zero records must not be interpreted as zero demand or complaints.",
+    "Review variants, countries and regulations differ from the Thai trial concept; no efficacy conclusion is drawn."
+  ]
+}
