@@ -24,11 +24,12 @@ export default function HomePage() {
             <span className="text-link">เปิดแผนฉบับเต็ม →</span>
           </Link>
         ))}
-        <div className="plan-index-card future-card" aria-label="Future plans placeholder">
-          <span className="status-pill neutral">Next</span>
-          <h2>แผนถัดไป</h2>
-          <p>โครงเว็บรองรับการเพิ่มหน้าใหม่ด้วย route แยก</p>
-        </div>
+        <Link className="plan-index-card skill-index-card" href="/skill">
+          <span className="status-pill">Student Beta v0.9.0</span>
+          <h2>Strategic Marketing Plan Skill</h2>
+          <p>ดาวน์โหลด portable Agent Skill พร้อม worked example, installer, validation และ dual license</p>
+          <span className="text-link">เปิดหน้าดาวน์โหลด →</span>
+        </Link>
       </section>
     </main>
   );

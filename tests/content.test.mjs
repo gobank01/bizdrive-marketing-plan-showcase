@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
@@ -192,6 +193,10 @@ test('generator and browser QA are portable', () => {
 
   const qa = source('scripts/browser-qa.mjs');
   assert.match(qa, /CHROME_EXECUTABLE_PATH/);
+  assert.match(qa, /QA_ROUTE/);
+  assert.match(qa, /\['\/toothpaste', '\/skill'\]/);
+  assert.match(qa, /tablet-breakpoint/);
+  assert.match(source('app/globals.css'), /@media \(max-width: 1200px\)/);
   assert.match(qa, /\/usr\/bin\/google-chrome/);
   assert.match(qa, /\/Applications\/Google Chrome\.app/);
 });
@@ -207,4 +212,48 @@ test('centralizes site origin and runs asset validation in CI', () => {
   assert.match(source('.github/workflows/ci.yml'), /python3 scripts\/validate-assets\.py/);
   assert.match(source('components/toothpaste-plan.tsx'), /Gates passed/);
   assert.doesNotMatch(source('components/toothpaste-plan.tsx'), />0 errors</);
+});
+
+test('archive validator rejects non-canonical member names', () => {
+  const validator = join(root, 'scripts', 'validate-assets.py');
+  const prefix = 'bizdrive-strategic-marketing-plan/';
+  const invalid = [
+    `${prefix}references/./a.md`,
+    `${prefix}references//a.md`,
+    `${prefix}references/a/../b.md`,
+    `${prefix}references\\a.md`,
+    'C:/skill/a.md',
+    `${prefix}references/\u0001a.md`,
+  ];
+  for (const name of invalid) {
+    assert.throws(
+      () => execFileSync('python3', [validator, '--check-member-name', name], { stdio: 'pipe' }),
+      `validator accepted unsafe member name: ${JSON.stringify(name)}`,
+    );
+  }
+  execFileSync('python3', [validator, '--check-member-name', `${prefix}references/a.md`], { stdio: 'pipe' });
+});
+
+test('publishes the independently reviewed student skill release', () => {
+  const skillRoute = join(root, 'app', 'skill', 'page.tsx');
+  const downloadDir = join(root, 'public', 'downloads', 'skill');
+  const filename = 'bizdrive-strategic-marketing-plan-v0.9.0.zip';
+  const zipPath = join(downloadDir, filename);
+  const sidecarPath = `${zipPath}.sha256`;
+  const expectedHash = '2f36245d86ec459f541c64afe37a11ebc8578fc9d52ccbac8b0589843df7683c';
+
+  assert.ok(existsSync(skillRoute));
+  const page = readFileSync(skillRoute, 'utf8');
+  for (const required of [
+    'Student Beta v0.9.0', 'Codex', 'Claude Code', 'Hermes',
+    'Agent Skills', 'CC BY-NC 4.0', 'MIT', '27/27 source',
+    '58 unique members', expectedHash, filename,
+  ]) assert.ok(page.includes(required), `missing skill release copy: ${required}`);
+  assert.match(page, /hermes skills list/);
+  assert.doesNotMatch(page, /real loader/i);
+  assert.ok(existsSync(zipPath));
+  assert.ok(existsSync(sidecarPath));
+  assert.equal(createHash('sha256').update(readFileSync(zipPath)).digest('hex'), expectedHash);
+  assert.equal(readFileSync(sidecarPath, 'utf8').trim().split(/\s+/)[0], expectedHash);
+  assert.match(source('app/sitemap.ts'), /\/skill/);
 });

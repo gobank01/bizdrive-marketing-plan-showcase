@@ -116,6 +116,7 @@ export function ToothpastePlan({ plan }: { plan: PlanData }) {
           <a href="#competition">10 Brands</a>
           <a href="#voice">Customer Voice</a>
           <a href="#full-plan">Full plan</a>
+          <Link href="/skill">Student Skill</Link>
         </nav>
         <a className="download-button" href="/downloads/toothpaste/full-plan.docx">ดาวน์โหลด DOCX</a>
       </header>
