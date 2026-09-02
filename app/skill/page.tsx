@@ -1,17 +1,17 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-const filename = 'bizdrive-strategic-marketing-plan-v0.9.1.zip';
+const filename = 'bizdrive-strategic-marketing-plan-v0.9.2.zip';
 const downloadHref = `/downloads/skill/${filename}`;
 const checksumHref = `${downloadHref}.sha256`;
-const sha256 = 'b32e06a6836aa9a4497f93d891c1cf6a1776fe0bb7bead6b53db9cd0458c8ee6';
+const sha256 = '3cadbe9bb6f3aac4aa607f7a76a21ff5e839eb3403d00cee00699c80322c725b';
 
 export const metadata: Metadata = {
   title: 'BizDrive Strategic Marketing Plan Skill — Student Beta',
   description: 'ดาวน์โหลด Agent Skill สำหรับสร้าง Category Intelligence, Strategic Plan และ Marketing Plan แบบ evidence-led',
   alternates: { canonical: '/skill' },
   openGraph: {
-    title: 'BizDrive Strategic Marketing Plan Skill — Student Beta v0.9.1',
+    title: 'BizDrive Strategic Marketing Plan Skill — Student Beta v0.9.2',
     description: 'Portable skill สำหรับ Codex, Claude Code, Hermes และ Agent Skills-compatible runtimes',
     type: 'website',
   },
@@ -51,7 +51,7 @@ export default function SkillPage() {
         <div>
           <p className="eyebrow">PORTABLE AGENT SKILL • STUDENT RELEASE</p>
           <span className="status-pill">Independent review passed</span>
-          <h1>Strategic Marketing Plan{' '}<br /><em>Student Beta v0.9.1</em></h1>
+          <h1>Strategic Marketing Plan{' '}<br /><em>Student Beta v0.9.2</em></h1>
           <p className="skill-lede">สร้าง Category Intelligence, explicit strategy choices, Strategic Plan ระดับแบรนด์/องค์กร และ Marketing Plan ที่เชื่อมถึงงบ KPI และ execution โดยไม่สร้างตัวเลขหรือหลักฐานขึ้นเอง</p>
           <div className="hero-actions">
             <a className="primary-button" href={downloadHref} download>ดาวน์โหลด Skill ZIP</a>
@@ -62,7 +62,7 @@ export default function SkillPage() {
           <p className="section-number">RELEASE VERIFICATION</p>
           <dl>
             <div><dt>Status</dt><dd>Approved for student distribution</dd></div>
-            <div><dt>Version</dt><dd>0.9.1 Student Beta</dd></div>
+            <div><dt>Version</dt><dd>0.9.2 Student Beta</dd></div>
             <div><dt>Tests</dt><dd>27/27 source + 27/27 extracted ZIP</dd></div>
             <div><dt>Archive</dt><dd>58 unique members • 1 manifest</dd></div>
             <div><dt>Review</dt><dd>Passed • 0 blockers</dd></div>
@@ -105,8 +105,9 @@ export default function SkillPage() {
           <article className="install-featured">
             <span>CLAUDE CODE</span>
             <h3>ติดตั้งบรรทัดเดียว ไม่ต้องใช้ Python</h3>
-            <pre><code>{`curl -sL https://bizdrive-marketing-plan.vercel.app${downloadHref} \\\n  -o /tmp/bizdrive-skill.zip \\\n  && mkdir -p ~/.claude/skills \\\n  && unzip -oq /tmp/bizdrive-skill.zip -d ~/.claude/skills`}</code></pre>
-            <p>ZIP มีโฟลเดอร์ชั้นบนสุดชื่อเดียว จึงลงตรงที่ <code>~/.claude/skills/bizdrive-strategic-marketing-plan/</code> พอดี เปิด Claude Code ใหม่แล้วพิมพ์ <code>/bizdrive-strategic-marketing-plan</code> หรือพิมพ์ว่า &ldquo;วางแผนการตลาดให้หน่อย&rdquo; ได้เลย</p>
+            <pre><code>{`git clone --depth 1 \\\n  https://github.com/gobank01/bizdrive-strategic-marketing-plan.git \\\n  ~/.claude/skills/bizdrive-strategic-marketing-plan`}</code></pre>
+            <p>เปิด Claude Code ใหม่แล้วพิมพ์ <code>/bizdrive-strategic-marketing-plan</code> หรือพิมพ์ว่า &ldquo;วางแผนการตลาดให้หน่อย&rdquo; ได้เลย อัปเดตรุ่นใหม่ด้วย <code>git pull</code> · ถ้าเครื่องไม่มี git โหลด ZIP ด้านล่างแล้วแตกลง <code>~/.claude/skills/</code> ได้ ZIP มีโฟลเดอร์ชั้นบนสุดชื่อเดียวจึงลงตรงตำแหน่งพอดี</p>
+            <p><a className="skill-text-link" href="https://github.com/gobank01/bizdrive-strategic-marketing-plan">เปิด repo บน GitHub →</a></p>
           </article>
           <article>
             <span>EXAMPLE</span>
@@ -140,7 +141,7 @@ export default function SkillPage() {
 
       <footer className="site-footer skill-footer">
         <div><span className="brand-dot" /><strong>BizDrive Strategic Marketing Plan Skill</strong></div>
-        <p>Student Beta v0.9.1 • Owner-authorized distribution • Publication does not authorize media spend, campaign launch or external outreach.</p>
+        <p>Student Beta v0.9.2 • Owner-authorized distribution • Publication does not authorize media spend, campaign launch or external outreach.</p>
       </footer>
     </main>
   );
