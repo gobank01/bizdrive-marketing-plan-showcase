@@ -1,17 +1,17 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-const filename = 'bizdrive-strategic-marketing-plan-v0.9.0.zip';
+const filename = 'bizdrive-strategic-marketing-plan-v0.9.1.zip';
 const downloadHref = `/downloads/skill/${filename}`;
 const checksumHref = `${downloadHref}.sha256`;
-const sha256 = '2f36245d86ec459f541c64afe37a11ebc8578fc9d52ccbac8b0589843df7683c';
+const sha256 = 'b32e06a6836aa9a4497f93d891c1cf6a1776fe0bb7bead6b53db9cd0458c8ee6';
 
 export const metadata: Metadata = {
   title: 'BizDrive Strategic Marketing Plan Skill — Student Beta',
   description: 'ดาวน์โหลด Agent Skill สำหรับสร้าง Category Intelligence, Strategic Plan และ Marketing Plan แบบ evidence-led',
   alternates: { canonical: '/skill' },
   openGraph: {
-    title: 'BizDrive Strategic Marketing Plan Skill — Student Beta v0.9.0',
+    title: 'BizDrive Strategic Marketing Plan Skill — Student Beta v0.9.1',
     description: 'Portable skill สำหรับ Codex, Claude Code, Hermes และ Agent Skills-compatible runtimes',
     type: 'website',
   },
@@ -51,7 +51,7 @@ export default function SkillPage() {
         <div>
           <p className="eyebrow">PORTABLE AGENT SKILL • STUDENT RELEASE</p>
           <span className="status-pill">Independent review passed</span>
-          <h1>Strategic Marketing Plan{' '}<br /><em>Student Beta v0.9.0</em></h1>
+          <h1>Strategic Marketing Plan{' '}<br /><em>Student Beta v0.9.1</em></h1>
           <p className="skill-lede">สร้าง Category Intelligence, explicit strategy choices, Strategic Plan ระดับแบรนด์/องค์กร และ Marketing Plan ที่เชื่อมถึงงบ KPI และ execution โดยไม่สร้างตัวเลขหรือหลักฐานขึ้นเอง</p>
           <div className="hero-actions">
             <a className="primary-button" href={downloadHref} download>ดาวน์โหลด Skill ZIP</a>
@@ -62,7 +62,7 @@ export default function SkillPage() {
           <p className="section-number">RELEASE VERIFICATION</p>
           <dl>
             <div><dt>Status</dt><dd>Approved for student distribution</dd></div>
-            <div><dt>Version</dt><dd>0.9.0 Student Beta</dd></div>
+            <div><dt>Version</dt><dd>0.9.1 Student Beta</dd></div>
             <div><dt>Tests</dt><dd>27/27 source + 27/27 extracted ZIP</dd></div>
             <div><dt>Archive</dt><dd>58 unique members • 1 manifest</dd></div>
             <div><dt>Review</dt><dd>Passed • 0 blockers</dd></div>
@@ -98,10 +98,16 @@ export default function SkillPage() {
       <section className="skill-section" id="install">
         <div className="section-intro">
           <p className="section-number">03 / INSTALL</p>
-          <h2>ดาวน์โหลด แตก ZIP แล้วใช้ installer ที่ให้มา</h2>
+          <h2>Claude Code ติดตั้งบรรทัดเดียว หรือใช้ installer ทุก runtime</h2>
           <p>อ่าน <code>README.md</code> และ <code>INSTALL.md</code> ในแพ็กเกจก่อนติดตั้ง โดยเฉพาะ Hermes project scope ซึ่ง installer จะลงทะเบียน absolute project skill directory และยืนยันว่า <code>hermes skills list</code> ค้นพบชื่อ skill</p>
         </div>
         <div className="install-grid">
+          <article className="install-featured">
+            <span>CLAUDE CODE</span>
+            <h3>ติดตั้งบรรทัดเดียว ไม่ต้องใช้ Python</h3>
+            <pre><code>{`curl -sL https://bizdrive-marketing-plan.vercel.app${downloadHref} \\\n  -o /tmp/bizdrive-skill.zip \\\n  && mkdir -p ~/.claude/skills \\\n  && unzip -oq /tmp/bizdrive-skill.zip -d ~/.claude/skills`}</code></pre>
+            <p>ZIP มีโฟลเดอร์ชั้นบนสุดชื่อเดียว จึงลงตรงที่ <code>~/.claude/skills/bizdrive-strategic-marketing-plan/</code> พอดี เปิด Claude Code ใหม่แล้วพิมพ์ <code>/bizdrive-strategic-marketing-plan</code> หรือพิมพ์ว่า &ldquo;วางแผนการตลาดให้หน่อย&rdquo; ได้เลย</p>
+          </article>
           <article>
             <span>EXAMPLE</span>
             <h3>Hermes project scope</h3>
@@ -134,7 +140,7 @@ export default function SkillPage() {
 
       <footer className="site-footer skill-footer">
         <div><span className="brand-dot" /><strong>BizDrive Strategic Marketing Plan Skill</strong></div>
-        <p>Student Beta v0.9.0 • Owner-authorized distribution • Publication does not authorize media spend, campaign launch or external outreach.</p>
+        <p>Student Beta v0.9.1 • Owner-authorized distribution • Publication does not authorize media spend, campaign launch or external outreach.</p>
       </footer>
     </main>
   );

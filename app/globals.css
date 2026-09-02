@@ -282,6 +282,8 @@ a.plan-index-card:hover { transform: translateY(-4px); box-shadow: var(--shadow)
 .install-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .install-grid article { min-width: 0; padding: 30px; border: 1px solid var(--line); border-radius: 16px; background: var(--paper); }
 .install-grid h3 { margin-top: 24px; }
+.install-grid .install-featured { grid-column: 1 / -1; border-color: var(--coral); }
+.install-grid .install-featured p { margin: 16px 0 0; font-size: 14px; line-height: 1.7; }
 .install-grid pre { max-width: 100%; margin: 22px 0 0; padding: 18px; overflow: auto; border-radius: 9px; background: #061d38; color: #f4f8ff; font: 12px/1.65 ui-monospace, SFMono-Regular, Menlo, monospace; }
 .skill-release { background: linear-gradient(135deg, #fff8d8 0%, var(--paper) 100%); }
 .integrity-card { display: grid; grid-template-columns: 1fr 1fr; gap: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: var(--white); box-shadow: var(--shadow); }
