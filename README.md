@@ -50,4 +50,4 @@ Browser QA looks for Chrome in common macOS/Linux locations. Override the execut
 
 The page labels verified facts, observations, calculated values and planning hypotheses. Public Customer Voice is privacy-reduced/pseudonymized, not fully anonymous: verbatim quotes and comment/review-level identifiers remain only in the private source, while generalized source URLs and coded analytical fields remain public. Convenience-sample bias is disclosed. Custom SVGs are original project assets. Product names are used for comparative editorial analysis; no partnership or endorsement is implied.
 
-This repository is private. The student package is owner-authorized for distribution with CC BY-NC 4.0 applying to content/examples and MIT applying to scripts/tests. It does not claim to be an official Manus port or runtime.
+This repository is public. The student package is owner-authorized for distribution with CC BY-NC 4.0 applying to content/examples and MIT applying to scripts/tests. It does not claim to be an official Manus port or runtime.
